@@ -14,3 +14,8 @@ class Test_class():
         assert classy[4] == 'Hand'
         assert classy[5] == 'HeadCT'
         assert 'HeadCT' in classy
+        assert 'AbdomenCT' in classy
+        assert 'BreastMRI' in classy
+        assert 'CXR' in classy
+        assert 'Hand' in classy
+        assert 'ChestCT' in classy
