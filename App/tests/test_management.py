@@ -11,12 +11,12 @@ def test_ok():
     print("ok")
 
 
-@pytest.fixture
-def fixture():
-    assert 0
-#
-def test_errored(fixture):
-    pass
+# @pytest.fixture
+# def fixture():
+#     assert 0
+# #
+# def test_errored(fixture):
+#     pass
 
 
 @pytest.mark.skip(reason='this is broken')
