@@ -13,3 +13,4 @@ class Test_class():
         assert classy[3] == 'CXR'
         assert classy[4] == 'Hand'
         assert classy[5] == 'HeadCT'
+        assert 'HeadCT' in classy
