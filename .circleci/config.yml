@@ -28,7 +28,7 @@ jobs:
             pip install pytest
             pip install pytest-cov
             pip install pytest-html
-          displayName: “Pytest Unit Test with Coverage”
+          
       #- python/install-deps
       #- python/tests
       - run:
