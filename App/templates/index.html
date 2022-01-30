@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="text-center">
+      <h1 class="h2 mb-3 font-weight-normal">MedNIST Data-Based Human Body Radiology Classification</h1>
+      <h2 class="h4 mb-3 font-weight-normal">Kindly upload your image</h2>
+    <div class="container">
+    <div class="form-group mt-5">
+        <input type="file" name="file[]" id="img" class="form-control img" accept=".png, .jpg, .jpeg"onchange="readURL(this)" multiple>
+    </div>
+    <button type="submit" class="btn btn-success" id="imgSub">Upload</button>
+    <p class="mt-5 mb-3 text-muted">Built using Pytorch, Flask and Bootstrap.</p>
+    <div id="gall">
+        
+    </div>
+    <p id="msg"></p>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Radiology Image</th>
+            <th scope="col">Predictions output</th>
+          </tr>
+        </thead>
+        <tbody id="tbimage">
+
+          <tr>
+
+          </tr>
+        </tbody>
+      </table>
+    
+      
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="{{ url_for('static', filename='js/imageConvert.js') }}"></script> 
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script> 
+</div>
+</body>
+</html>
