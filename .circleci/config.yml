@@ -24,23 +24,24 @@ jobs:
           name: Install Python dependencies
           command:
             python -m pip install --upgrade pip
-            pip install --upgrade pip
             pip install  -r requirements.txt
             pip install pytest
             pip install pytest-cov
             pip install pytest-html
+          displayName: “Pytest Unit Test with Coverage”
       #- python/install-deps
       #- python/tests
       - run:
           name: Run tests
-          command: python -m pytest --junitxml=test-reports/junit.xml --html=test-reports/report.html --cov=App/tests --cov-report=html:test-reports --self-contained-html
-
+          command: python -m pytest -v --junitxml=test-reports/junit.xml --html=test-reports/report.html --cov=App/tests --cov-report=html:test-reports --self-contained-html
+          
 
       - store_test_results:
           path: test-reports
       - store_artifacts:
           path: test-reports
           destination: apptestflask
+          
 
 workflows:
   main:
